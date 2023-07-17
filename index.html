@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+  <title>Responsive Webpage</title>
+  <style>
+    @font-face {
+      font-family: 'CustomFont';
+      src: url('Hurricane-Regular.ttf') format('opentype');
+    }
+
+    .section {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+    }
+
+    #section1 { background-color: #FF6384; padding: 12px;}
+    #section2 { background-color: #36A2EB;padding: 12px; }
+    #section3 { background-color: #FFCE56; padding: 12px;}
+    #section4 { background-color: #4BC0C0; padding: 12px;}
+    #section5 { background-color: #FF9F40; padding: 16px;}
+    #section6 { background-color: #333;padding: 12px; }
+
+    /* Navbar styling */
+    .navbar {
+      background-color: #333;
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+    }
+
+    .btn-custom {
+      background-color: #e794a6;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #FF496D;
+    }
+
+    .section img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .section .paragraph-container {
+      padding: 20px;
+      border-radius: 4px;
+      background-color: #FF9F40;
+      color: white;
+    }
+
+    .section .paragraph-container h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .section .paragraph-container p {
+      font-size: 18px;
+    }
+    #section4 img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.paragraph-container {
+  outline: 2px solid #36A2EB;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.outlined-paragraph {
+  margin-top: 10px;
+}
+
+.outlined-heading {
+  display: block;
+  font-weight: bold;
+  color: #36A2EB;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+    .footer {
+      background-color: #333;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .style1 {
+      font-family: 'CustomFont', Arial, sans-serif;
+      font-size: 80px;
+      font-weight: bolder;
+    }
+
+    .style2 {
+      font-family: 'CustomFont', Arial, sans-serif;
+      font-size: 80px;
+    }
+
+    .animate-bottom {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: animateBottom 3s ease forwards;
+    }
+
+    @keyframes animateBottom {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .irregular-outline {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .irregular-outline:before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      z-index: -1;
+      border: 2px solid #FF6384;
+      border-radius: 30px;
+    }
+
+    .irregular-outline:after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      z-index: -2;
+      border: 2px solid #FF6384;
+      border-radius: 50px;
+    }
+
+    /* Adjust section height for small devices */
+    @media (max-width: 767.98px) {
+      .section {
+        height: 400px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="section" id="section1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+          <h2 class="animate-bottom style1">Heading 1</h2>
+          <p class="animate-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#" class="btn btn-custom animate-bottom irregular-outline">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <h2 class="style2">Section 2 Heading</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum ligula at pharetra aliquet. Mauris
+            iaculis ex nunc, non placerat lectus efficitur ac.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="section3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Section 3 Heading</h2>
+          <img src="../images/jerry.png" alt="Section 3 Image">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum ligula at pharetra aliquet. Mauris
+            iaculis ex nunc, non placerat lectus efficitur ac.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="section4">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <img src="path/to/image.jpg" alt="Section 4 Image">
+        </div>
+        <div class="col-lg-12">
+          <div class="paragraph-container">
+            <h2>Section 4 Heading</h2>
+            <p class="outlined-paragraph">
+              <span class="outlined-heading">
+                Unique Styling
+              </span>
+              Some text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum ligula at
+              pharetra aliquet. Mauris iaculis ex nunc, non placerat lectus efficitur ac.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="section5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <img src="path/to/image.jpg" alt="Section 5 Image">
+        </div>
+        <div class="col-lg-12">
+          <div >
+            <h2>Section 5 Heading</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum ligula at pharetra aliquet. Mauris
+              iaculis ex nunc, non placerat lectus efficitur ac.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="section6">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Section 6 Heading</h2>
+          <p>This is the text in section 6.</p>
+          <a href="#" class="btn btn-custom">Visit Link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Terms and Conditions <a href="#">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
